@@ -59,9 +59,9 @@ export default function InteractiveBackground() {
   }
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-t from-black to-blue-500/30 from-40% overflow-hidden">
+    <div className="fixed inset-0 bg-gradient-to-t from-blue-900/30 to-blue-600/30 from-10% overflow-hidden">
       <div
-        className="absolute bg-blue-500/30 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none blur-3xl transition-all duration-100 ease-out"
+        className="absolute bg-blue-600/30 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none blur-3xl transition-all duration-100 ease-out"
         style={{
           opacity,
           left: `${mousePos.x}px`,

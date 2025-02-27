@@ -15,13 +15,13 @@
 }
 
 h1 {
-  font-family: var(--font-rubik-mono);
-  font-size: xx-large;
+  font-family: var(--font-rubik-scribble);
+  font-size: 6rem;
 }
 
 h2 {
   font-family: var(--font-rubik-mono);
-  font-size: x-large;
+  font-size: 2rem;
 }
 
 h3 {

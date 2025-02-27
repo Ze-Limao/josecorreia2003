@@ -1,5 +1,5 @@
 import type React from "react"
-import { rubik, rubikMono } from "./fonts"
+import { rubik, rubikMono, rubikScribble } from "./fonts"
 import "./globals.css"
 
 export default function RootLayout({
@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${rubik.variable} ${rubikMono.variable}`}>
+    <html lang="en" className={`${rubik.variable} ${rubikMono.variable} ${rubikScribble.variable}`}>
       <body>{children}</body>
     </html>
   )
