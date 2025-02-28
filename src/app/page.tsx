@@ -41,7 +41,7 @@ export default function Home() {
     return () => {
       observers.forEach((observer) => observer.disconnect())
     }
-  }, [])
+  }, [navItems]); 
 
   return (
     <Layout>

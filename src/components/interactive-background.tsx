@@ -1,7 +1,6 @@
 "use client"
 
 import { useMemo, useState, useEffect } from "react"
-import Logo from "@/components/logo"
 
 export default function InteractiveBackground() {
   const [mounted, setMounted] = useState(false)
