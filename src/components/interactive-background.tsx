@@ -3,15 +3,6 @@
 import { useMemo, useState, useEffect } from "react"
 import Logo from "@/components/logo"
 
-//const logoGradient = useMemo(() => {
-//    if (!mounted) return ""
-//    const rect = logoRef.current?.getBoundingClientRect()
-//    const xPos = mousePos.x - (rect?.left ?? 0)
-//    const yPos = mousePos.y - (rect?.top ?? 0)
-//
-//    return `radial-gradient(circle at ${xPos}px ${yPos}px, black 30%, transparent 100%)`
-//  }, [mousePos.x, mousePos.y, mounted])
-
 export default function InteractiveBackground() {
   const [mounted, setMounted] = useState(false)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
@@ -59,9 +50,9 @@ export default function InteractiveBackground() {
   }
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-t from-blue-900/30 to-blue-600/30 from-10% overflow-hidden">
+    <div className="fixed inset-0 bg-gradient-to-b from-indigo-700/30 to-indigo-500/30 from-70% overflow-hidden">
       <div
-        className="absolute bg-blue-600/30 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none blur-3xl transition-all duration-100 ease-out"
+        className="absolute bg-indigo-600/30 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none blur-3xl transition-all duration-100 ease-out"
         style={{
           opacity,
           left: `${mousePos.x}px`,
