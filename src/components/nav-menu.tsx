@@ -29,7 +29,7 @@ export function NavMenu({ items, activeSection, setActiveSection }: NavMenuProps
   }
 
   return (
-    <nav className="space-y-4 mt-12">
+    <nav className="space-y-4 mt-12 font-bold">
       {items.map((item) => (
         <div
           key={item.id}

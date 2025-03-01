@@ -1,0 +1,16 @@
+{
+  "projectsData": [
+    {
+      "title": "Dharma Market",
+      "description": "Collaborated with an awesome team to take the project to the next level, implementing a whole new merchandise...",
+      "technologies": [
+        { "name": "Vue.js" },
+        { "name": "TypeScript" },
+        { "name": "Tailwind" },
+        { "name": "Meilisearch" }
+      ],
+      "logo": "/logo.png",
+      "link": "https://market.mydharma.network/"
+    }
+  ]
+}
