@@ -53,21 +53,13 @@ export default function Home() {
         />
         <ContentContainer>
           <SectionContainer id="about" title="ABOUT">
-            I am a first-year Master's student in Software Engineering at the
-            University of Minho. My journey through computer science has
-            equipped me with expertise in various domains, from Algorithms to
-            AI. I'm also proud to contribute to CoderDojo, nurturing future
-            programmers.
+            {
+              "I am a first-year Master's student in Software Engineering at the University of Minho. My journey through computer science has equipped me with expertise in various domains, from Algorithms to AI. I'm also proud to contribute to CoderDojo, nurturing future programmers."
+            }
           </SectionContainer>
-
           <SectionContainer id="experience" title="EXPERIENCE">
-            This is indeed one of the websites in the internet. This is indeed
-            one of the websites in the internet. This is indeed one of the
-            websites in the internet. This is indeed one of the websites in the
-            internet. This is indeed one of the websites in the internet. This
-            is indeed one of the websites in the internet.
+            This is indeed indeed indeed.
           </SectionContainer>
-
           <SectionContainer id="projects" title="PROJECTS">
             My Projects.
           </SectionContainer>

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { ProjectCard } from "./card";
-import { projectsData } from "@/projects.json";
+import projectsData from "@/projects.json";
 import type { Project } from "@/types/project"
 
 type SectionContainerProps = {
@@ -10,7 +10,7 @@ type SectionContainerProps = {
 };
 
 export function ProjectsSection() {
-  const projects: Project[] = projectsData
+  const projects: Project[] = projectsData.projectsData
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {projects.map((project) => (
