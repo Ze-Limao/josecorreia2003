@@ -64,25 +64,10 @@ export default {
           "100%": {
             transform: "rotateY(360deg)",
           },
-        },
-        cloud: {
-          "0%": {
-            transform: "translateX(-300%)",
-          },
-          "50%": {
-            transform: "translateX(300%)",
-          },
-          "50.01%": {
-            transform: "translateX(300%)",
-          },
-          "100%": {
-            transform: "translateX(-300%)",
-          },
-        },
+        }
       },
       animation: {
-        spinSlow: "spinY 4s linear infinite",
-        cloud: "cloud 2s linear infinite",
+        spin: "spinY 10s linear infinite",
       },
       borderRadius: {
         lg: "var(--radius)",

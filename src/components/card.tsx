@@ -12,7 +12,7 @@ export function ProjectCard({
 }: Project) {
   return (
     <Tilt rotationFactor={5} isRevese>
-      <div className="flex flex-col bg-white bg-opacity-25 hover:border-2 rounded-xl">
+      <div className="flex flex-col bg-white bg-opacity-25 border-2 hover:border-white rounded-xl">
         <div className="relative w-full aspect-[2/1]">
           <Image
             src={logo || "/placeholder.svg"}

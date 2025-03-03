@@ -34,7 +34,7 @@ export function NavMenu({ items, activeSection, setActiveSection }: NavMenuProps
         <div
           key={item.id}
           className={cn(
-            "block text-gray-400 transition-colors",
+            "block text-zinc-400 transition-colors",
             "relative pl-6 group flex items-center",
             activeSection === item.id && "text-white",
           )}

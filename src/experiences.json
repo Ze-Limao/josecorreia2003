@@ -1,0 +1,34 @@
+{
+    "experiences": [
+      {
+        "company": "CeSIUM",
+        "link": "https://cesium.di.uminho.pt/",
+        "startDate": "Oct'23",
+        "endDate": "present",
+        "roles": [
+          {
+            "title": "Co-Director",
+            "department": "Recreation Department"
+          },
+          {
+            "title": "Collaborator",
+            "department": "Recreation Department"
+          }
+        ]
+      },
+      {
+        "company": "YariLabs",
+        "link": "https://yarilabs.com/",
+        "startDate": "Jun'24",
+        "endDate": "Aug'24",
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "department": "Summer Internship"
+          }
+        ]
+      }
+    ]
+  }
+  
+  
