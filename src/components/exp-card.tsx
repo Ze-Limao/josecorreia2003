@@ -15,7 +15,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
               href={experience.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white hover:text-indigo-400 transition-colors"
+              className="flex items-center gap-2 text-white hover:text-indigo-300 transition-colors"
             >
               <h3 className="text-lg sm:text-xl font-semibold">{experience.company}</h3>
               <ExternalLink size={16} className="shrink-0" />

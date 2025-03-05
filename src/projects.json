@@ -6,11 +6,24 @@
       "technologies": [
         { "name": "Vue.js" },
         { "name": "TypeScript" },
-        { "name": "Tailwind" },
         { "name": "Meilisearch" }
       ],
-      "logo": "/logo.png",
+      "logo": "/dharma.png",
       "link": "https://market.mydharma.network/"
+    },
+    {
+      "title": "PictuRAS",
+      "description": "A powerful and easy-to-use image editing web app, where I focused on frontend development and integration...",
+      "technologies": [
+        { "name": "Vue.js" },
+        { "name": "Tailwind" },
+        { "name": "Elixir" },
+        { "name": "Python" },
+        { "name": "RabbitMQ" },
+        { "name": "Docker" }
+      ],
+      "logo": "/picturas.png",
+      "link": "https://github.com/Ze-Limao/PictuRAS"
     }
   ]
 }

@@ -6,9 +6,11 @@ import { ProfileSidebar } from "@/components/profile";
 import { SectionContainer } from "@/components/section-container";
 import { ContentContainer } from "@/components/content-container";
 import Image from "next/image";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
+
   const navItems = [
     { id: "about", label: "ABOUT" },
     { id: "experience", label: "EXPERIENCE" },
@@ -31,7 +33,7 @@ export default function Home() {
           },
           {
             threshold: 0.5,
-            rootMargin: "-24px 0px 0px 0px", // Offset for the top padding
+            rootMargin: "-24px 0px 0px 0px",
           }
         );
 
@@ -46,7 +48,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <main className="flex flex-col lg:flex-row min-h-screen px-4 sm:px-6 lg:px-[5%] py-6 sm:py-8 lg:py-16 overflow-hidden">
+      <main className="flex flex-col lg:flex-row min-h-screen px-4 sm:px-6 lg:px-[5%] pt-6 sm:pt-8 lg:pt-16 overflow-hidden">
         <ProfileSidebar
           navItems={navItems}
           activeSection={activeSection}
@@ -56,11 +58,12 @@ export default function Home() {
           <SectionContainer id="about" title="ABOUT">
             <div className="flex flex-col items-center space-y-8">
               <p>
-                I am a first-year Master&apos;s student in Software Engineering at
-                the University of Minho, Braga, Portugal. My journey in computer
-                science has given me expertise in areas like Algorithms, AI, and
-                Software Development. I use this site to showcase my projects,
-                share my experiences, and document my learning process.
+                I am a first-year Master&apos;s student in Software Engineering
+                at the University of Minho, Braga, Portugal. My journey in
+                computer science has given me expertise in areas like
+                Algorithms, AI, and Software Development. I use this site to
+                showcase my projects, share my experiences, and document my
+                learning process.
               </p>
               <Image
                 src="/logo.png"
@@ -77,6 +80,7 @@ export default function Home() {
           <SectionContainer id="projects" title="PROJECTS">
             {undefined}
           </SectionContainer>
+          <Footer />
         </ContentContainer>
       </main>
     </Layout>

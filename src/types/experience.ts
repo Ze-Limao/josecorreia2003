@@ -1,6 +1,6 @@
 export interface Role {
   title: string;
-  department: string;
+  department?: string;
 }
 
 export interface Experience {

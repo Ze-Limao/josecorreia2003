@@ -1,34 +1,46 @@
 {
-    "experiences": [
-      {
-        "company": "CeSIUM",
-        "link": "https://cesium.di.uminho.pt/",
-        "startDate": "Oct'23",
-        "endDate": "present",
-        "roles": [
-          {
-            "title": "Co-Director",
-            "department": "Recreation Department"
-          },
-          {
-            "title": "Collaborator",
-            "department": "Recreation Department"
-          }
-        ]
-      },
-      {
-        "company": "YariLabs",
-        "link": "https://yarilabs.com/",
-        "startDate": "Jun'24",
-        "endDate": "Aug'24",
-        "roles": [
-          {
-            "title": "Frontend Developer",
-            "department": "Summer Internship"
-          }
-        ]
-      }
-    ]
-  }
-  
-  
+  "experiences": [
+    {
+      "company": "UMinho",
+      "link": "https://www.uminho.pt/",
+      "startDate": "Oct'21",
+      "endDate": "present",
+      "roles": [
+        {
+          "title": "M.S. in Software Engineering"
+        },
+        {
+          "title": "B.S. in Software Engineering"
+        }
+      ]
+    },
+    {
+      "company": "CeSIUM",
+      "link": "https://cesium.di.uminho.pt/",
+      "startDate": "Oct'23",
+      "endDate": "present",
+      "roles": [
+        {
+          "title": "Co-Director",
+          "department": "Recreation Department"
+        },
+        {
+          "title": "Collaborator",
+          "department": "Recreation Department"
+        }
+      ]
+    },
+    {
+      "company": "YariLabs",
+      "link": "https://yarilabs.com/",
+      "startDate": "Jun'24",
+      "endDate": "Aug'24",
+      "roles": [
+        {
+          "title": "Frontend Developer",
+          "department": "Summer Internship"
+        }
+      ]
+    }
+  ]
+}

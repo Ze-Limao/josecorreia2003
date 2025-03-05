@@ -5,6 +5,7 @@ import type { Project } from "@/types/project";
 import { ExperienceCard } from "./exp-card";
 import experienceData from "@/experiences.json";
 import type { Experience } from "@/types/experience";
+import { Tilt } from "@/components/ui/tilt";
 
 type SectionContainerProps = {
   id: string;
@@ -16,11 +17,13 @@ export function ExperienceSection() {
   const experiences: Experience[] = experienceData.experiences;
 
   return (
-    <div className="bg-white/20 rounded-xl p-6 border-2 space-y-8 hover:border-white transition-colors">
-      {experiences.map((experience) => (
-        <ExperienceCard key={experience.company} experience={experience} />
-      ))}
-    </div>
+    <Tilt rotationFactor={3}>
+      <div className="bg-white/20 rounded-xl p-6 border-2 space-y-8 hover:border-white transition-colors">
+        {experiences.map((experience) => (
+          <ExperienceCard key={experience.company} experience={experience} />
+        ))}
+      </div>
+    </Tilt>
   );
 }
 
@@ -29,7 +32,9 @@ export function ProjectsSection() {
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {projects.map((project) => (
-        <ProjectCard key={project.title} {...project} />
+        <Tilt key={project.title} rotationFactor={5}>
+          <ProjectCard key={project.title} {...project} />
+        </Tilt>
       ))}
     </div>
   );

@@ -17,7 +17,7 @@ export function ProfileSidebar({
   setActiveSection,
 }: ProfileSidebarProps) {
   return (
-    <div className="w-full lg:w-[42%] static lg:fixed lg:h-screen overflow-y-auto px-4 mb-8 lg:mb-0 lg:pl-4">
+    <div className="w-full lg:w-[42%] static lg:fixed lg:h-screen overflow-hidden px-4 mb-8 lg:mb-0 lg:pl-4">
       <div className="justify-left text-pretty">
         <NameTitle />
         <div className="flex flex-col">
