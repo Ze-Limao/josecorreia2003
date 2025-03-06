@@ -68,9 +68,9 @@ export default function Home() {
               <Image
                 src="/logo.png"
                 alt={`Eu`}
-                width={300}
-                height={300}
-                className="flex animate-spin"
+                width={600}
+                height={600}
+                className="flex"
               />
             </div>
           </SectionContainer>
