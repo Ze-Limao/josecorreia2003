@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${rubik.variable} ${rubikMono.variable} ${rubikScribble.variable}`}>
+    <html lang="en" className={`dark ${rubik.variable} ${rubikMono.variable} ${rubikScribble.variable}`}>
       <body>{children}</body>
     </html>
   )
