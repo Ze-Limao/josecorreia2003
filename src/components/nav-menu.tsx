@@ -10,16 +10,16 @@ type NavItem = {
 type NavMenuProps = {
   items: NavItem[];
   activeSection: string;
-  setActiveSection: (id: string) => void;
+  setPendingTargetId: (id: string | null) => void;
 };
 
 export function NavMenu({
   items,
   activeSection,
-  setActiveSection,
+  setPendingTargetId,
 }: NavMenuProps) {
   const handleScroll = useCallback(
-    (id: string) => {
+    (id: string, behavior: ScrollBehavior = "smooth") => {
       const element = document.getElementById(id);
       if (element) {
         const topOffset = 100;
@@ -28,12 +28,11 @@ export function NavMenu({
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: "smooth",
+          behavior,
         });
-        setActiveSection(id);
       }
     },
-    [setActiveSection]
+    []
   );
 
   const handleArrowKeyNavigation = useCallback(
@@ -52,15 +51,17 @@ export function NavMenu({
         event.preventDefault();
         const nextIndex = (currentIndex + 1) % items.length;
         const nextSectionId = items[nextIndex].id;
-        handleScroll(nextSectionId);
+        setPendingTargetId(nextSectionId);
+        handleScroll(nextSectionId, "smooth");
       } else if (event.key === "ArrowUp") {
         event.preventDefault();
         const prevIndex = (currentIndex - 1 + items.length) % items.length;
         const prevSectionId = items[prevIndex].id;
-        handleScroll(prevSectionId);
+        setPendingTargetId(prevSectionId);
+        handleScroll(prevSectionId, "smooth");
       }
     },
-    [activeSection, items, handleScroll]
+    [activeSection, items, handleScroll, setPendingTargetId]
   );
 
   useEffect(() => {
@@ -95,7 +96,8 @@ export function NavMenu({
             href={`#${item.id}`}
             onClick={(e) => {
               e.preventDefault();
-              handleScroll(item.id);
+              setPendingTargetId(item.id);
+              handleScroll(item.id, "smooth");
             }}
             className={cn(
               "transition-all duration-200 hover:text-white",

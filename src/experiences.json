@@ -7,10 +7,10 @@
       "endDate": "present",
       "roles": [
         {
-          "title": "M.S. in Software Engineering"
+          "title": "B.S. in Software Engineering"
         },
         {
-          "title": "B.S. in Software Engineering"
+          "title": "M.S. in Software Engineering"
         }
       ]
     },
@@ -18,14 +18,14 @@
       "company": "CeSIUM",
       "link": "https://cesium.di.uminho.pt/",
       "startDate": "Oct'23",
-      "endDate": "present",
+      "endDate": "Oct'25",
       "roles": [
         {
-          "title": "Co-Director",
+          "title": "Collaborator",
           "department": "Recreation Department"
         },
         {
-          "title": "Collaborator",
+          "title": "Director",
           "department": "Recreation Department"
         }
       ]

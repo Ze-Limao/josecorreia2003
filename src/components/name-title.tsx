@@ -15,17 +15,7 @@ export function NameTitle() {
           rotateYDistance={20}
           className="font-rubikScribble text-[2rem] sm:text-[2.5rem] md:text-[4rem] lg:text-[5rem] text-wrap [--base-color:#ffffff] [--base-gradient-color:#ffffff]"
         >
-          José&nbsp;
-        </TextShimmerWave>
-        <TextShimmerWave
-          duration={1}
-          spread={1}
-          zDistance={1}
-          scaleDistance={1.1}
-          rotateYDistance={20}
-          className="font-rubikScribble text-[2rem] sm:text-[2.5rem] md:text-[4rem] lg:text-[5rem] text-wrap [--base-color:#ffffff] [--base-gradient-color:#ffffff]"
-        >
-          Correia
+          José Correia
         </TextShimmerWave>
       </div>
       <div>

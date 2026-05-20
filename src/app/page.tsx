@@ -1,15 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Layout from "@/components/layout";
 import { ProfileSidebar } from "@/components/profile";
 import { SectionContainer } from "@/components/section-container";
 import { ContentContainer } from "@/components/content-container";
 import Image from "next/image";
 import Footer from "@/components/footer";
+import { aboutParagraphs } from "@/content/about";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
+  const pendingTargetIdRef = useRef<string | null>(null);
+  const setPendingTargetId = useCallback((id: string | null) => {
+    pendingTargetIdRef.current = id;
+  }, []);
 
   const navItems = [
     { id: "about", label: "ABOUT" },
@@ -27,6 +32,13 @@ export default function Home() {
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
+                const pendingTargetId = pendingTargetIdRef.current;
+                if (pendingTargetId && id !== pendingTargetId) {
+                  return;
+                }
+                if (pendingTargetId && id === pendingTargetId) {
+                  pendingTargetIdRef.current = null;
+                }
                 setActiveSection(id);
               }
             });
@@ -52,24 +64,21 @@ export default function Home() {
         <ProfileSidebar
           navItems={navItems}
           activeSection={activeSection}
-          setActiveSection={setActiveSection}
+          setPendingTargetId={setPendingTargetId}
         />
         <ContentContainer>
           <SectionContainer id="about" title="ABOUT">
-            <div className="flex flex-col items-center space-y-8">
-              <p>
-                I am a first-year Master&apos;s student in Software Engineering
-                at the University of Minho, Braga, Portugal. My journey in
-                computer science has given me expertise in areas like
-                Algorithms, AI, and Software Development. I use this site to
-                showcase my projects, share my experiences, and document my
-                learning process.
-              </p>
+            <div className="flex flex-col items-center space-y-4">
+              <div className="space-y-2">
+                {aboutParagraphs.map((paragraph, index) => (
+                  <p key={`${index}-${paragraph.slice(0, 20)}`}>{paragraph}</p>
+                ))}
+              </div>
               <Image
                 src="/logo.png"
                 alt={`Eu`}
-                width={600}
-                height={600}
+                width={400}
+                height={400}
                 className="flex"
               />
             </div>
