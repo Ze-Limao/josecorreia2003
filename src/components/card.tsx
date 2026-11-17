@@ -12,13 +12,31 @@ export function ProjectCard({
   return (
     <div className="flex flex-col bg-white bg-opacity-25 border-2 hover:border-white rounded-xl">
       <div className="relative w-full aspect-[2/1]">
-        <Image
-          src={logo || "/placeholder.svg"}
-          alt={`${title} logo`}
-          fill
-          className="object-cover rounded-t-xl"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${title}`}
+            className="relative block h-full w-full rounded-t-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            <Image
+              src={logo || "/placeholder.svg"}
+              alt={`${title} logo`}
+              fill
+              className="object-cover rounded-t-xl"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </a>
+        ) : (
+          <Image
+            src={logo || "/placeholder.svg"}
+            alt={`${title} logo`}
+            fill
+            className="object-cover rounded-t-xl"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        )}
       </div>
       <div className="p-2">
         <div className="flex flex-col space-y-2 pb-1">

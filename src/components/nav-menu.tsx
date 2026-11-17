@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useRef } from "react";
 
 type NavItem = {
   id: string;
@@ -18,6 +18,12 @@ export function NavMenu({
   activeSection,
   setPendingTargetId,
 }: NavMenuProps) {
+  const wheelLockRef = useRef<number | null>(null);
+  const activeSectionRef = useRef(activeSection);
+  const itemsRef = useRef(items);
+  activeSectionRef.current = activeSection;
+  itemsRef.current = items;
+
   const handleScroll = useCallback(
     (id: string, behavior: ScrollBehavior = "smooth") => {
       const element = document.getElementById(id);
@@ -64,6 +70,48 @@ export function NavMenu({
     [activeSection, items, handleScroll, setPendingTargetId]
   );
 
+  const handleWheelNavigation = useCallback(
+    (event: WheelEvent) => {
+      if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        event.target instanceof HTMLSelectElement ||
+        event.deltaY === 0
+      ) {
+        return;
+      }
+
+      const currentItems = itemsRef.current;
+      const currentIndex = currentItems.findIndex(
+        (item) => item.id === activeSectionRef.current
+      );
+      const direction = event.deltaY > 0 ? 1 : -1;
+
+      const isAtScrollBoundary =
+        (direction > 0 && currentIndex === currentItems.length - 1) ||
+        (direction < 0 && currentIndex === 0);
+
+      if (isAtScrollBoundary) {
+        return;
+      }
+
+      event.preventDefault();
+
+      if (wheelLockRef.current !== null) return;
+
+      const nextIndex =
+        (currentIndex + direction + currentItems.length) % currentItems.length;
+      const nextSectionId = currentItems[nextIndex].id;
+
+      setPendingTargetId(nextSectionId);
+      handleScroll(nextSectionId, "smooth");
+      wheelLockRef.current = window.setTimeout(() => {
+        wheelLockRef.current = null;
+      }, 700);
+    },
+    [handleScroll, setPendingTargetId]
+  );
+
   useEffect(() => {
     window.addEventListener("keydown", handleArrowKeyNavigation);
 
@@ -71,6 +119,18 @@ export function NavMenu({
       window.removeEventListener("keydown", handleArrowKeyNavigation);
     };
   }, [handleArrowKeyNavigation]);
+
+  useEffect(() => {
+    window.addEventListener("wheel", handleWheelNavigation, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheelNavigation);
+      if (wheelLockRef.current !== null) {
+        window.clearTimeout(wheelLockRef.current);
+        wheelLockRef.current = null;
+      }
+    };
+  }, [handleWheelNavigation]);
 
   return (
     <nav className="space-y-4 mt-12 font-bold">

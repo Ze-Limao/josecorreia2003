@@ -1,5 +1,5 @@
 'use client';
-import { type JSX } from 'react';
+import { useMemo, type JSX } from 'react';
 import { motion, Transition } from 'motion/react';
 import { cn } from '@/lib/utils';
 
@@ -30,8 +30,9 @@ export function TextShimmerWave({
   rotateYDistance = 10,
   transition,
 }: TextShimmerWaveProps) {
-  const MotionComponent = motion.create(
-    Component as keyof JSX.IntrinsicElements
+  const MotionComponent = useMemo(
+    () => motion.create(Component as keyof JSX.IntrinsicElements),
+    [Component]
   );
 
   return (

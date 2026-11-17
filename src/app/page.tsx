@@ -5,8 +5,6 @@ import Layout from "@/components/layout";
 import { ProfileSidebar } from "@/components/profile";
 import { SectionContainer } from "@/components/section-container";
 import { ContentContainer } from "@/components/content-container";
-import { Tilt } from "@/components/ui/tilt";
-import Image from "next/image";
 import Footer from "@/components/footer";
 import { aboutParagraphs } from "@/content/about";
 
@@ -69,21 +67,10 @@ export default function Home() {
         />
         <ContentContainer>
           <SectionContainer id="about" title="ABOUT">
-            <div className="flex flex-col items-center space-y-4">
-              <div className="space-y-2">
-                {aboutParagraphs.map((paragraph, index) => (
-                  <p key={`${index}-${paragraph.slice(0, 20)}`}>{paragraph}</p>
-                ))}
-              </div>
-              <Tilt rotationFactor={6} className="inline-block">
-                <Image
-                  src="/logo.png"
-                  alt={`Eu`}
-                  width={400}
-                  height={400}
-                  className="flex"
-                />
-              </Tilt>
+            <div className="space-y-2">
+              {aboutParagraphs.map((paragraph, index) => (
+                <p key={`${index}-${paragraph.slice(0, 20)}`}>{paragraph}</p>
+              ))}
             </div>
           </SectionContainer>
           <SectionContainer id="experience" title="EXPERIENCE">
