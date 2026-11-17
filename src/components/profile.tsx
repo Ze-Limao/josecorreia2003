@@ -31,9 +31,7 @@ export function ProfileSidebar({
             setPendingTargetId={setPendingTargetId}
           />
         </div>
-        <div
-          className="hidden lg:flex mx-auto mt-10 h-80 w-full max-w-xs items-center justify-center"
-        >
+        <div className="hidden lg:flex mx-auto mt-10 h-[480px] w-[480px] items-center justify-center">
           <MascotPlaceholder sectionKey={activeSection} />
         </div>
       </div>

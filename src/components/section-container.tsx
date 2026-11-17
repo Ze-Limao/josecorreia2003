@@ -48,7 +48,7 @@ export function SectionContainer({
   return (
     <section id={id} className="min-h-[50vh] lg:min-h-screen">
       <div>
-        <h3 className="text-2xl mb-8">{title}</h3>
+        <h3 className="text-3xl mb-8">{title}</h3>
         <div className="text-zinc-300">
           {id === "projects" ? (
             <ProjectsSection />

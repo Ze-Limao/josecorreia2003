@@ -133,7 +133,7 @@ export function NavMenu({
   }, [handleWheelNavigation]);
 
   return (
-    <nav className="space-y-4 mt-12 font-bold">
+    <nav className="space-y-4 mt-12 font-bold min-[1080px]:text-xl">
       {items.map((item) => (
         <div
           key={item.id}
