@@ -2,7 +2,7 @@
   "projectsData": [
     {
       "title": "Dharma Market",
-      "description": "Collaborated with an awesome team to take the project to the next level, implementing a whole new merchandise...",
+      "description": "Collaborated with an awesome team to take the project to the next level by implementing a new merchandise marketplace, improving the shopping experience and integrating search capabilities.",
       "technologies": [
         { "name": "Vue.js" },
         { "name": "TypeScript" },
@@ -13,7 +13,7 @@
     },
     {
       "title": "PictuRAS",
-      "description": "A powerful and easy-to-use image editing web app, where I focused on frontend development and integration...",
+      "description": "A powerful and easy-to-use image editing web application, where I focused on frontend development, user interface implementation, and integration with backend services to deliver a seamless image editing experience.",
       "technologies": [
         { "name": "Vue.js" },
         { "name": "Tailwind" },
@@ -24,6 +24,21 @@
       ],
       "logo": "/picturas.png",
       "link": "https://github.com/Ze-Limao/PictuRAS"
+    },
+    {
+      "title": "Pokéntology",
+      "description": "An ontology-based system to represent and explore the Pokémon universe through semantic web technologies. It models Pokémon, regions, moves, items, types, and their relationships using RDF and OWL, supporting SPARQL queries, semantic reasoning, ontology management, and interactive graph visualization.",
+      "technologies": [
+        { "name": "Python" },
+        { "name": "Flask" },
+        { "name": "RDF / OWL" },
+        { "name": "SPARQL" },
+        { "name": "D3.js" },
+        { "name": "GraphDB" },
+        { "name": "Docker" }
+      ],
+      "logo": "/pokentology.png",
+      "link": "https://github.com/Ze-Limao/RPCW-Project"
     }
   ]
 }

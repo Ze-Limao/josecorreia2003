@@ -1,16 +1,37 @@
 {
   "experiences": [
     {
-      "company": "UMinho",
-      "link": "https://www.uminho.pt/",
-      "startDate": "Oct'21",
-      "endDate": "Oct'26",
+      "company": "dst group",
+      "link": "https://www.dstsgps.com/",
+      "startDate": "Nov'25",
+      "endDate": "Jul'26",
       "roles": [
         {
-          "title": "B.S. in Software Engineering"
-        },
+          "title": "AI Engineer Intern"
+        }
+      ]
+    },
+    {
+      "company": "YariLabs",
+      "link": "https://yarilabs.com/",
+      "startDate": "Jun'24",
+      "endDate": "Jul'24",
+      "roles": [
         {
-          "title": "M.S. in Software Engineering"
+          "title": "Frontend Developer",
+          "department": "Summer Internship"
+        }
+      ]
+    },
+    {
+      "company": "Niup",
+      "link": "https://www.niup.com/",
+      "startDate": "Jun'23",
+      "endDate": "Jul'23",
+      "roles": [
+        {
+          "title": "Backend Developer",
+          "department": "Summer Internship"
         }
       ]
     },
@@ -31,14 +52,16 @@
       ]
     },
     {
-      "company": "YariLabs",
-      "link": "https://yarilabs.com/",
-      "startDate": "Jun'24",
-      "endDate": "Aug'24",
+      "company": "UMinho",
+      "link": "https://www.uminho.pt/",
+      "startDate": "Oct'21",
+      "endDate": "Oct'26",
       "roles": [
         {
-          "title": "Frontend Developer",
-          "department": "Summer Internship"
+          "title": "B.S. in Software Engineering"
+        },
+        {
+          "title": "M.S. in Software Engineering"
         }
       ]
     }

@@ -18,7 +18,7 @@ export function ExperienceSection() {
 
   return (
     <Tilt rotationFactor={3}>
-      <div className="bg-white/20 rounded-xl p-6 border-2 space-y-8 hover:border-white transition-colors">
+      <div className="bg-white/20 rounded-xl p-4 m-4 border-2 space-y-8 hover:border-white transition-colors">
         {experiences.map((experience) => (
           <ExperienceCard key={experience.company} experience={experience} />
         ))}

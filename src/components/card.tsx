@@ -24,7 +24,7 @@ export function ProjectCard({
               src={logo || "/placeholder.svg"}
               alt={`${title} logo`}
               fill
-              className="object-cover rounded-t-xl"
+              className="rounded-t-xl"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </a>
@@ -33,7 +33,7 @@ export function ProjectCard({
             src={logo || "/placeholder.svg"}
             alt={`${title} logo`}
             fill
-            className="object-cover rounded-t-xl"
+            className="rounded-t-xl"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         )}
