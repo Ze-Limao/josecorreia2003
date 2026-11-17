@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react"
+import type { ReactNode } from "react"
 
-export function SocialLinks() {
+export function SocialLinks({ children }: { children?: ReactNode }) {
   return (
     <div className="flex flex-wrap gap-2 sm:gap-4 my-4">
       <a href="https://github.com/Ze-Limao" target="_blank" rel="noopener noreferrer" className="flex">
@@ -26,6 +27,7 @@ export function SocialLinks() {
           <span> Mail </span>
         </button>
       </a>
+      {children}
     </div>
   )
 }

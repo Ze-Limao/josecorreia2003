@@ -4,6 +4,7 @@ import { NameTitle } from "./name-title";
 import { SocialLinks } from "./social";
 import { ResumeButton } from "./resume";
 import { NavMenu } from "./nav-menu";
+import { MascotPlaceholder } from "./mascot-placeholder";
 
 type ProfileSidebarProps = {
   navItems: Array<{ id: string; label: string }>;
@@ -20,16 +21,20 @@ export function ProfileSidebar({
     <div className="w-full lg:w-[42%] static lg:fixed lg:h-screen overflow-hidden px-4 mb-8 lg:mb-0 lg:pl-4">
       <div className="justify-left text-pretty">
         <NameTitle />
-        <div className="flex flex-col">
-          <SocialLinks />
+        <SocialLinks>
           <ResumeButton />
-        </div>
+        </SocialLinks>
         <div className="sm:block hidden">
           <NavMenu
             items={navItems}
             activeSection={activeSection}
             setPendingTargetId={setPendingTargetId}
           />
+        </div>
+        <div
+          className="hidden lg:flex mx-auto mt-10 h-80 w-full max-w-xs items-center justify-center"
+        >
+          <MascotPlaceholder sectionKey={activeSection} />
         </div>
       </div>
     </div>
