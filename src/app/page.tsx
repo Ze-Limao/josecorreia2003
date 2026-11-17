@@ -67,7 +67,7 @@ export default function Home() {
         />
         <ContentContainer>
           <SectionContainer id="about" title="ABOUT">
-            <div className="space-y-2">
+            <div className="space-y-6">
               {aboutParagraphs.map((paragraph, index) => (
                 <p key={`${index}-${paragraph.slice(0, 20)}`}>{paragraph}</p>
               ))}

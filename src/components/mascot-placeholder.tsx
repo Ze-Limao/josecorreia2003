@@ -40,6 +40,7 @@ export function MascotPlaceholder({ sectionKey }: MascotPlaceholderProps) {
       antialias: true,
     });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.domElement.style.display = "block";
     renderer.domElement.style.position = "absolute";
     renderer.domElement.style.inset = "0";
@@ -63,8 +64,8 @@ export function MascotPlaceholder({ sectionKey }: MascotPlaceholderProps) {
     });
     resizeObserver.observe(container);
 
-    const ambientLight = new THREE.HemisphereLight(0xffffff, 0x303040, 2);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+    const ambientLight = new THREE.HemisphereLight(0xffffff, 0x303040, 0.7);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
     directionalLight.position.set(2, 3, 4);
     scene.add(ambientLight, directionalLight);
 
